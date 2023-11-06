@@ -1,0 +1,24 @@
+/* Carliana Roland 
+9/11/23
+COMP167, SEC-001
+Continuation of creating and setting up the ship in the "Asteroids" game using given UML document
+*/
+
+package Astr_pack;
+import java.awt.Rectangle;
+
+
+public class Ship extends VectorShape { // you are to extend to inherit from the parent class (VectorShape), VectorShape's super class is object and Ship's superclass is VectorShape
+	private int[] shipX = {-6, -3, 0, 3, 6, 0}; // initializing the int array
+	private int[] shipY = {6, 7, 7, 7, 6, -7};
+	
+	public Ship() {
+		setShape(new Rectangle(0,0,1,1)); // setshape is now inherited from the VectorShape
+		setAlive(false); // alive is false
+	}
+	
+	public Rectangle getBounds() {
+		return new Rectangle((int)getX() -6, (int)getY() -6, 12, 12); // type casting the getters for X and Y to return an intetger instead of a double
+	}
+
+}
