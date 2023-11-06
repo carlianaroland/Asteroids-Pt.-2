@@ -1,0 +1,33 @@
+/* Carliana Roland 
+9/11/23
+COMP167, SEC-001
+Continuation of creating and setting up the Asteroid in the "Asteroids" game using given UML document
+*/
+
+package Astr_pack;
+import java.awt.Polygon;
+import java.awt.Rectangle;
+
+public class Asteroid extends VectorShape { // Asteroids superclass is VectorShape
+	private int[] astX = {-20, -13, 0, 20, 22, 20, 12, 2, -10, 22, -16};
+	private int[] astY = {20, 23, 17, 20, 16, -20, -22, -14, -17, -20, -5};
+	protected double rotVel; // protected variable
+	
+	public Asteroid() {
+		setShape(new Polygon(this.astX, this.astY, this.astX.length)); // do not add parenthesis to the length for an array 
+		setAlive(true);
+	}
+	
+	public void setRotationVelocity(double rotVel) {
+		
+	}
+	
+	public double getRotationVelocity() {
+		return this.rotVel = 0.0;
+	}
+	
+	public Rectangle getBounds() { 
+		return new Rectangle((int)getX() -20, (int)getY() -20, 40, 40);
+	}
+
+}
